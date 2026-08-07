@@ -68,3 +68,37 @@ lista_messi = "Vamos, Messi".split(",")
 # La lista queda: lista_messi = ["Vamos", "Messi"]
 
 ## -------------- Parte 01 del modulo: "Listas y Tuplas" -------------- ##
+
+
+## ----------------- Parte 02 del modulo: "Conjuntos" ----------------- ##
+# Los conjuntos (sets) son un tipo de colección
+
+set1 = {1, 2, 3, 4, 4} 
+# Los elementos duplicados no cuentan al conjunto final
+# set1 en realidad es: set1 = {1, 2, 3, 4}
+
+# Conversión de lista a conjunto
+jugadores_lista = ["Tapia", "Di Nenno", "Chingotto", "Sanyo", "Sanyo"]
+jugadores_set = set(jugadores_lista)
+# jugadores_set = {"Tapia", "Di Nenno", "Chingotto", "Sanyo"}
+
+# Operaciones con conjuntos
+jugadores_set.add("Stupaczuk") # Agrega un elemento al conjunto
+# jugadores_set = {"Tapia", "Di Nenno", "Chingotto", "Sanyo", "Stupaczuk"}
+
+jugadores_set.remove("Chingotto") # Elimina un elemento del conjunto
+# jugadores_set = {"Tapia", "Di Nenno", "Sanyo", "Stupaczuk"}
+
+"Tapia" in jugadores_set # Chequea si un elemento está o no en el conjunto
+# Devuelve True o False
+# En este caso devuelve True
+
+jugadores_set2 = {"Tapia", "Di Nenno", "Coello"}
+
+jugadores_set3 = jugadores_set & jugadores_set2 # Devuelve la intersección de los dos conjuntos
+# jugadores_set3 = {"Tapia", "Di Nenno"}
+
+jugadores_set3 = jugadores_set | jugadores_set2 # Devuelve la unión de los dos conjuntos
+# jugadores_set3 = {"Tapia", "Di Nenno", "Chingotto", "Sanyo", "Stupaczuk", "Coello"}
+
+## ----------------- Parte 02 del modulo: "Conjuntos" ------------------ ##
