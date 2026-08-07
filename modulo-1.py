@@ -1,9 +1,9 @@
-## -------------- Video 01 del curso: "Primer programa en Python" -------------- ##
+## -------------- Parte 01 del curso: "Primer programa en Python" -------------- ##
 print("Hello World!")
-## -------------- Video 01 del curso: "Primer programa en Python" -------------- ##
+## -------------- Parte 01 del curso: "Primer programa en Python" -------------- ##
 
 
-## ------------------------ Video 02 del curso: "Tipos" ------------------------ ##
+## ------------------------ Parte 02 del curso: "Tipos" ------------------------ ##
 # 12 : int
 # 12.4 : float
 # "Tomas 18" : str
@@ -27,10 +27,10 @@ int(True) # => 1
 int(False) # => 0
 bool(1) # => True
 bool(0) # => False
-## ------------------------ Video 02 del curso: "Tipos" ------------------------ ##
+## ------------------------ Parte 02 del curso: "Tipos" ------------------------ ##
 
 
-## ---------------- Video 03 del curso: "Expresiones y Variables" -------------- ##
+## ---------------- Parte 03 del curso: "Expresiones y Variables" -------------- ##
 # Expresiones
 # 40 + 20 = 60
 # 40 y 20 son operandos (operands)
@@ -48,10 +48,10 @@ variable2 = variable / 3 # le asignamos el resultado de variable / 3
 type(variable) # => int
 type(variable2) # => float
 
-## ---------------- Video 03 del curso: "Expresiones y Variables" -------------- ##
+## ---------------- Parte 03 del curso: "Expresiones y Variables" -------------- ##
 
 
-## ---------------- Video 04 del curso: "Operaciones con Strings" -------------- ##
+## ---------------- Parte 04 del curso: "Operaciones con Strings" -------------- ##
 Nombre = "Tomas Emiliano"
 # T o m a s  E m i l i a n o
 # 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 (posiciones)
@@ -92,4 +92,4 @@ NombreReemplazo = Nombre.replace('Tomas', 'Señor') # = "Señor Emiliano"
 Nombre.find('Emiliano') # = 6 (devuelve el primer índice de la secuencia)
 Nombre.find('To') # = 0  (devuelve el primer índice de la secuencia)
 
-## ---------------- Video 04 del curso: "Operaciones con Strings" -------------- ##
+## ---------------- Parte 04 del curso: "Operaciones con Strings" -------------- ##
