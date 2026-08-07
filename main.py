@@ -52,7 +52,44 @@ type(variable2) # => float
 
 
 ## ---------------- Video 04 del curso: "Operaciones con Strings" -------------- ##
+Nombre = "Tomas Emiliano"
+# T o m a s  E m i l i a n o
+# 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 (posiciones)
+# -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 (posiciones en negativo, no va el 0)
+Nombre[2] # = m
+Nombre[14] # = o
+Nombre[-1] # = o
+Nombre[-13] # = T
 
+Nombre[0:5] # = Tomas
+Nombre[6:15] # = Emiliano
 
+Nombre[::2] # = T m s   i i a o (se selecciona cada 2 variables)
+Nombre[0:5:4] # = T (se devuelve cada segundo valor hasta el índice 4)
+
+# Longitud de una cadena
+len(Nombre) # = 15 (devuelve la cantidad de caracteres que tiene la variable)
+len("Tomas Emiliano") # = 15
+
+# Concatenación de una cadena
+fusion = Nombre + "es el mejor"
+# fusion = "Tomas Emiliano es el mejor"
+
+# Multiplicación de cadenas
+2 * Nombre # = "Tomas Emiliano Tomas Emiliano"
+
+# Barra invertida con cadenas
+Nombre = "Tomas \n Emiliano" # \n es un salto de línea
+Nombre = "Tomas \t Emiliano" # \t es un tabulado
+Nombre = "Tomas \\ Emiliano" # \\ es \
+
+# Métodos de Strings
+NombreEnMayuscula = Nombre.upper() # = "TOMAS EMILIANO"
+NombreEnMinuscula = Nombre.lower() # = "tomas emiliano"
+
+NombreReemplazo = Nombre.replace('Tomas', 'Señor') # = "Señor Emiliano"
+
+Nombre.find('Emiliano') # = 6 (devuelve el primer índice de la secuencia)
+Nombre.find('To') # = 0  (devuelve el primer índice de la secuencia)
 
 ## ---------------- Video 04 del curso: "Operaciones con Strings" -------------- ##
