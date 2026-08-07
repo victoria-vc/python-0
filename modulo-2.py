@@ -102,3 +102,49 @@ jugadores_set3 = jugadores_set | jugadores_set2 # Devuelve la unión de los dos 
 # jugadores_set3 = {"Tapia", "Di Nenno", "Chingotto", "Sanyo", "Stupaczuk", "Coello"}
 
 ## ----------------- Parte 02 del modulo: "Conjuntos" ------------------ ##
+
+
+## ----------------- Parte 03 del modulo: "Diccionarios" ------------------ ##
+# Los diccionarios son un tipo de colección
+# A cada key (clave) le corresponde un valor
+# Los valores para cada key pueden ser mutables, inmutables y duplicados
+
+diccionario = {"key1": 60, "key2": 20, "key3": "UTN", "key4": [4,4,4], "key5": ("B", "O")}
+
+# Ejemplo más entendible:
+diccionario = {
+    "nombre": "Tomas",
+    "edad": 22,
+    "anio": 2004,
+    "club": "CABJ",
+    "pais": "Argentina"
+}
+# Usando la clave diccionario["nombre"] nos devuelve el valor "Tomas"
+# Usando la clave diccionario["anio"] nos vevuelve el valor 2004
+
+# Agregar nueva entrada al diccionario
+diccionario["color favorito"] = "Verde"
+# Así, el diccionario queda:
+# diccionario = {
+#     "nombre": "Tomas",
+#     "edad": 22,
+#     "anio": 2004,
+#     "club": "CABJ",
+#     "pais": "Argentina",
+#     "color favorito": "Verde"
+# } 
+
+# Borrar una entrada del diccionario
+del(diccionario["edad"])
+
+# Verificar si algún elemento está en el diccionario
+"pais" in diccionario
+"color favorito" in diccionario
+# Devuelve True o False
+
+# Obtener todas las claves del diccionario
+diccionario.keys()
+
+# Obtener todos los valores del diccionario
+diccionario.values()
+## ----------------- Parte 03 del modulo: "Diccionarios" ------------------ ##
