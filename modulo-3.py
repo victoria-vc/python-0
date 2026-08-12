@@ -100,6 +100,10 @@ rating_programas_ordenado = sorted(rating_programas)
 rating_programas.sort()
 # rating_programas = [3.9, 4.2, 6.2, 6.4, 8.6, 9.0]
 
+# La función <reverse> invierte el orden de los elementos de una lista
+rating_programas.reverse()
+# rating_programas = [9.0, 8.6, 6.4, 6.2, 4.2, 3.9]
+
 # Definir nuestras propias funciones
 # def nombre_función(parámetro_formal):
 #     cuerpo_de_la_función
@@ -141,4 +145,97 @@ def sumar(*x): # Con "*x", la función puede recibir una cantidad variable de pa
     return sum(x)
 
 print(sumar(2,4,6))
+# Imprime 12
 ## -------------------- Parte 03 del modulo: "Funciones" ---------------------- ##
+
+
+## ----------------- Parte 04 del modulo: "Clases y Objetos" ------------------ ##
+# Objetos
+# En Python, cada tipo de dato es un objeto
+# Cada objeto en Python es una instancia de una clase
+# Cada objeto es un tipo
+# Un objeto es una instancia de un tipo particular
+# Cada objeto tiene un conjunto de funciones llamadas métodos para interactuar con los datos
+
+# Ejemplo
+# Cuando creamos un entero (int)
+# Object 1: 40
+# Object 2: 10
+# etc ...
+# O cuando creamos una lista
+# Object 1: A = [a, b, c, d]
+# Object 2: Lista = [20, 40, 60]
+# etc ...
+
+# Methods
+# Los métodos de una clase o tipo son funciones que cada instancia de esa clase o tipo proporciona
+# Es cómo interactúas con el objeto
+# Por ejemplo, en rating_programas.sort():
+# sort() es un método de la clase (en este caso, listas)
+# rating_programas es el nombre del objeto
+
+# Definir clases
+# Las clases tienen:
+# - Atributos
+# - Métodos (funciones)
+
+class Circulo(object):
+
+    # Atributos de la clase
+    def __init__(self, radio, color):
+        self.radio = radio
+        self.color = color
+    # Métodos de la clase
+    def cambiar_radio(self,nuevo_radio):
+        self.radio = nuevo_radio
+    def cambiar_color(self, nuevo_color):
+        self.color = nuevo_color
+
+class Rectangulo(object):
+
+    # Atributos de la clase
+    def __init__(self, base, altura, color):
+        self.base = base
+        self.altura = altura
+        self.color = color
+    # Métodos de la clase
+    def calcular_area(self):
+        return self.base * self.altura
+    
+# La función <init> es un constructor, le dice a Python que estás creando una nueva clase
+# El parámetro "self" se refiere a la instancia recién creada de la clase
+
+# Crear un objeto de la clase Circulo
+CirculoVerde = Circulo(10, "verde")
+
+# Crear un objeto de la clase Rectangulo
+RectanguloAzul = Rectangulo(2, 4, "azul")
+
+# Cambiar valores
+CirculoVerde.color = "azul"
+RectanguloAzul.base = 3
+
+# Usar métodos
+CirculoVerde.cambiar_color("rojo")
+RectanguloAzul.calcular_area() # Devuelve 12
+
+# Función dir
+# Es útil para obtener la lista de datos y métodos asociados a una clase
+# El objeto que nos interesa se pasa como argumento
+print(dir(CirculoVerde))
+# Imprime: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', 
+# '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', 
+# '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', 
+# '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', 
+# '__subclasshook__', '__weakref__', 'cambiar_color', 'cambiar_radio', 'color', 'radio']
+
+print(dir(RectanguloAzul))
+# Imprime: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__',
+#  '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__',
+#  '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__',
+#  '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__',
+#  '__subclasshook__', '__weakref__', 'altura', 'base', 'calcular_area', 'color']
+
+# Solo nos importan los atributos que parecen normales y tienen sentido, lo demás lo ignoramos
+
+## ----------------- Parte 04 del modulo: "Clases y Objetos" ------------------ ##
