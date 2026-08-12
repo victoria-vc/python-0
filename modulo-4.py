@@ -35,7 +35,7 @@ with open("ejemplo2.txt", "r") as file2:
     # LÍNEA 1
     # LÍNEA 2
 
-# Bucles en archivos
+# Bucles en archivos (lectura)
 with open("ejemplo1.txt", "r") as file1:
     for line in file1:
         print(line)
@@ -47,3 +47,27 @@ with open("ejemplo1.txt", "r") as file1:
     print(primeros_5)
     # Se imprime "tomas"
 ## -------------- Parte 01 del modulo: "Leyendo archivos con Open" -------------- ##
+
+
+## ------------ Parte 02 del modulo: "Escribiendo archivos con Open" ------------ ##
+with open("ejemplo3.txt", "w") as file3:
+    file3.write("LÍNEA 0\n")
+    file3.write("LÍNEA 1\n")
+
+with open("ejemplo3.txt", "r") as file3:
+    print(file3.read())
+    # Imprime "LÍNEA 0"
+    #         "LÍNEA 1"
+
+# Bucles en archivos (escritura)
+Lineas = ["LÍNEA 0 \n", "LÍNEA 1 \n", "LÍNEA 2 \n"]
+with open("ejemplo3.txt", "w") as file3:
+    for linea in Lineas:
+        file3.write(linea)
+
+with open("ejemplo3.txt", "r") as file3:
+    print(file3.read())
+    # Imprime "LÍNEA 0"
+    #         "LÍNEA 1"
+    #         "LÍNEA 2"
+## ------------ Parte 02 del modulo: "Escribiendo archivos con Open" ------------ ##
