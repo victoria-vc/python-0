@@ -70,6 +70,10 @@ with open("ejemplo3.txt", "r") as file3:
     # Imprime "LÍNEA 0"
     #         "LÍNEA 1"
     #         "LÍNEA 2"
+
+# Agregar contenido al final del archivo (sin borrar lo existente):
+# with open("Example3.txt","a") as file1:
+# file1.write("This is line C\n")
 ## ------------ Parte 02 del modulo: "Escribiendo archivos con Open" ------------ ##
 
 
