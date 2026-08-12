@@ -71,3 +71,61 @@ with open("ejemplo3.txt", "r") as file3:
     #         "LÍNEA 1"
     #         "LÍNEA 2"
 ## ------------ Parte 02 del modulo: "Escribiendo archivos con Open" ------------ ##
+
+
+## -------------- Parte 03 del modulo: "Cargando data con Pandas" --------------- ##
+# Pandas
+# Pandas es una biblioteca popular para el análisis de datos
+# Si importamos pandas, tenemos acceso a gran número de clases y funciones preconstruidas:
+# read_csv(), Series(), DataFrame, values, etc.
+import pandas as pd
+# Escribir pandas todo el rato puede ser tedioso; mejor abreviar
+# pd = pandas (lo aclaramos en la importación de pandas)
+
+csv_path = 'file1.csv'
+# Un CSV es un tipo de archivo típico utilizado para almacenar datos
+
+data_frame = pd.read_csv(csv_path)
+# Un data frame se compone de filas y columnas
+
+data_frame.head()
+# Te muestra las primeras 5 filas por defecto
+# Podes elegir la cantidad
+# data_frame.head(2) (primeras 2)
+
+data_frame.tail()
+# Te muestra las últimas 5 filas por defecto
+# Podes elegir la cantidad
+# data_frame.tail(2) (últimas 2)
+# Se puede crear un data frame a partir de un diccionario
+Videojuegos = {"Nombre": ["Meccha Chameleon", "GTA 5", "Sims 4", "Minecraft"],
+                "Anio": [2026, 2013, 2014, 2009],
+                "Tipo": ["Aventura", "Acción", "Simulación", "Construcción"]}
+
+juegos_dataframe = pd.DataFrame(Videojuegos)
+# Se forma una tabla con los datos del diccionario Videojuegos
+
+# Acceder a la tabla especificando fila y columna
+print(juegos_dataframe.iloc[0, 0]) # iloc para números
+print(juegos_dataframe.loc[0, "Anio"]) # loc para nombres
+## -------------- Parte 03 del modulo: "Cargando data con Pandas" --------------- ##
+
+
+## -------------- Parte 04 del modulo: "Guardando data con Pandas" -------------- ##
+# Unique
+# Supongamos que se tiene un Data Frame con álbumes y su fecha de lanzamiento
+# Quiero saber qué fechas de lanzamiento son únicas, es decir, que no se repiten
+# Hacemos:
+# df["Released"].unique()
+
+# Bool
+# Si queremos los álbumes que se lanzaron a partir de 1980
+# Hacemos:
+# df["Released"] >= 1980
+# Podemos colocar esos álbumes en otro DataFrame
+# otro_df = df[df["Released"] >= 1980]
+
+# Guardar nuestro Data Frame (método to_csv)
+# otro_df.to_csv("albumes80.csv")
+
+## -------------- Parte 04 del modulo: "Guardando data con Pandas" -------------- ##
