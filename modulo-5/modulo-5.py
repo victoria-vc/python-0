@@ -1,4 +1,4 @@
-## -------------- Parte 01 del modulo: "Numpy 1D y Arreglos" -------------- ##
+## -------------- Parte 01 del modulo: "Arreglos Numpy 1D" -------------- ##
 # Numpy es una biblioteca para computación científica. Proporciona estructuras de datos 
 # de alto rendimiento y herramientas para trabajar con arreglos multidimensionales
 import numpy as np # Importamos la biblioteca
@@ -124,4 +124,72 @@ y = np.sin(x)
 # Número de fin: 2
 # Número de elementos: 9
 # Diferencia entre elementos/muestras: 0.5
-## -------------- Parte 01 del modulo: "Numpy 1D y Arreglos" -------------- ##
+## -------------- Parte 01 del modulo: "Arreglos Numpy 1D" -------------- ##
+
+
+## -------------- Parte 02 del modulo: "Arreglos Numpy 2D" -------------- ##
+list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+arreglo = np.array(list)
+# Queda como un arreglo 2D
+# Su forma es:
+# 1  2  3
+# 4  5  6
+# 7  8  9
+# Cada lista, pasa a ser una fila de la matriz
+
+print(arreglo.ndim)
+# Imprime: 2
+
+print(arreglo.shape)
+# Imprime: (3, 3)
+
+print(arreglo.size)
+# Imprime: 9
+
+# Indexación y Slicing
+arreglo[1][2]
+# El valor del arreglo en la fila 1, columna 2 es: 6
+# (fila 1: segundo valor de la fila y columna 2: tercer valor de la fila)
+# Arranca en 0 
+
+arreglo[0][0]
+# El valor del arreglo en la fila 0, columna 0 es: 1
+
+arreglo[0, 0:2]
+# El valor del arreglo en la fila 0, columnas 0 y 1 es: [1 2]
+
+# Suma de matrices
+matriz1 = np.array([[2,4],[6,8]])
+matriz2 = np.array([[1,3],[5,7]])
+matriz_suma = matriz1 + matriz2
+print(matriz_suma)
+# Imprime: [[ 3  7]
+#           [11 15]]
+
+# Resta de matrices
+matriz1 = np.array([[2,4],[6,8]])
+matriz2 = np.array([[1,3],[5,7]])
+matriz_resta = matriz1 - matriz2
+print(matriz_resta)
+# Imprime: [[1 1]
+#           [1 1]]
+
+# Multiplicación de matrices con un escalar
+matrizNueva = matriz1 * 2
+print(matrizNueva)
+# Imprime: [[ 4  8]
+#           [12 16]]
+
+# Multiplicación de dos matrices
+matriz_producto = matriz1 * matriz2
+print(matriz_producto)
+# Imprime: [[ 2 12]
+#           [30 56]]
+
+# Producto punto de matrices
+matriz_producto_punto = np.dot(matriz1, matriz2)
+print(matriz_producto_punto)
+# Imprime: [[ 22  52]
+#           [ 86 116]]
+
+## -------------- Parte 02 del modulo: "Arreglos Numpy 2D" -------------- ##
